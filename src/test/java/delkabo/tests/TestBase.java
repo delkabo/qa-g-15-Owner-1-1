@@ -15,11 +15,11 @@ import static com.codeborne.selenide.Selenide.*;
 public class TestBase {
 
 
-//    @BeforeAll
-//    static void setUp() {
-//        DriverSettings.configure();
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//    }
+    @BeforeAll
+    static void setUp() {
+        DriverSettings.configure();
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
 
 
     @AfterEach

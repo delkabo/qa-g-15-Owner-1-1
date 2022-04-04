@@ -12,12 +12,8 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class WebDriverTest {
+public class WebDriverTest extends TestBase{
 
-    @BeforeEach
-    public void setUp(){
-        DriverSettings.configure();
-    }
 
     @Test
     public void getConfigTest() {
