@@ -1,6 +1,7 @@
 package delkabo.tests;
 
 import delkabo.config.TokenConfig;
+import jdk.jfr.Description;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -26,7 +27,8 @@ public class TokenTest {
     }
 
     @Test
-    @DisplayName("Проверка чтения локального token.properties")
+    @DisplayName("проверка token.properties на рабочем столе")
+    @Description("проверка token.properties на рабочем столе")
     void tokenTest() throws  Exception{
 
         File newFile = new File(pathString);
@@ -48,11 +50,12 @@ public class TokenTest {
     }
 
     @Test
-    @DisplayName("если нет локального token.properties, то считать из classpath")
+    @DisplayName("проверка token.properties в classpath")
+    @Description("если нет локального token.properties, то считать из classpath")
     void tokenTestIfNoLocal() {
 
         TokenConfig config = ConfigFactory.create(TokenConfig.class, System.getProperties());
-        assertThat(config.token()).isEqualTo("ololoshka");
+        assertThat(config.token()).isEqualTo("ololoshka"); //токен ololoshka записан classpath:token.properties
 
     }
 }
