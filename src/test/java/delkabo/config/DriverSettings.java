@@ -21,6 +21,7 @@ public class DriverSettings {
 
         Configuration.browser = webBrowser();
         Configuration.browserVersion = webVersionBrowser();
+        Configuration.browserSize = browserSize();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 

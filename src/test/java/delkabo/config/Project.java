@@ -14,6 +14,8 @@ public class Project {
         return webConfig.getBrowser();
     }
 
+    public static String browserSize() { return webConfig.browserSize(); }
+
     public static String webVersionBrowser() {
         return webConfig.versionBrowser();
     }
