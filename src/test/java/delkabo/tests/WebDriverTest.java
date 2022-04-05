@@ -14,7 +14,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class WebDriverTest extends TestBase{
 
-
     @Test
     public void getConfigTest() {
         open("https://yandex.ru/internet/");
@@ -22,6 +21,5 @@ public class WebDriverTest extends TestBase{
                 .findBy(text("Браузер")).getText();
         System.out.println(getBrowser);
     }
-
 
 }
